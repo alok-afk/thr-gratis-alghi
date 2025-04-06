@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Suara Klik Prank</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+      text-align: center;
+      cursor: pointer;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Klik di mana saja untuk mendengar suara</h1>
+
+  <audio id="prankSound" src="Prank Suara Desahan Palsu.mp3" preload="auto"></audio>
+
+  <script>
+    const sound = document.getElementById('prankSound');
+
+    document.body.addEventListener('click', () => {
+      sound.currentTime = 0;
+      sound.play();
+    });
+  </script>
+</body>
+</html>
